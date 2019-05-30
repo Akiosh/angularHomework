@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-enum category {
-  music = 'music',
-  game = 'game',
-  book = 'book'
-}
+import { Component, OnInit, Input } from '@angular/core';
+import { ProductModel } from '../../model/product.model';
 
 @Component({
   selector: 'app-product',
@@ -12,14 +7,7 @@ enum category {
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
-  title = 'hello world';
-  name = 'name';
-  description = 'description';
-  price = 120;
-  isAvailable = true;
-
-  array = ['1', '2', '3', '4'];
+  @Input() product: ProductModel;
 
   constructor() { }
 
@@ -28,7 +16,7 @@ export class ProductComponent implements OnInit {
 
   onBuy(event: any) {
     console.log(event);
-    console.log(`buy ${this. name}\n___________________`);
+    console.log(`buy ${this.product.name}\n___________________`);
   }
 
 }

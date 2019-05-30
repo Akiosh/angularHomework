@@ -1,9 +1,5 @@
-<h1>{{title}}</h1>
-<ul>
-  <li>name: {{name}}</li>
-  <li>description: {{description}}</li>
-  <li>price: {{price}}</li>
-  <li>isAvailable: {{isAvailable}}</li>
-  <li>{{array.join(' --> ')}}</li>
-</ul>
+<div>name: {{product.name}}</div>
+<div>description: {{product.description}}</div>
+<div>price: {{product.price}}</div>
+<div>isAvailable: {{product.isAvailable}}</div>
 <button (click)="onBuy($event)">Buy {{name}}!</button>
