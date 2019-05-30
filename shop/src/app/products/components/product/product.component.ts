@@ -26,4 +26,9 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
+  onBuy(event: any) {
+    console.log(event);
+    console.log(`buy ${this. name}\n___________________`);
+  }
+
 }
