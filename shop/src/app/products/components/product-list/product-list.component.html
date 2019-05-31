@@ -1,5 +1,7 @@
-<ul>
-  <li *ngFor="let product of productList$ | async">
-    <app-product [product]="product"></app-product>
-  </li>
-</ul>
+<div class="panel panel-default">
+  <ul>
+    <li *ngFor="let product of productList$ | async">
+      <app-product [product]="product"></app-product>
+    </li>
+  </ul>
+</div>
