@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductModel } from '../../model/product.model';
+import { LocalStorageService } from 'src/app/core/service/localStorage.service';
 
 @Component({
   selector: 'app-product',
@@ -9,14 +10,18 @@ import { ProductModel } from '../../model/product.model';
 export class ProductComponent implements OnInit {
   @Input() product: ProductModel;
 
-  constructor() { }
+  constructor(
+    private localStorageService: LocalStorageService
+  ) { }
 
   ngOnInit() {
   }
 
   onBuy(event: any) {
-    console.log(event);
-    console.log(`buy ${this.product.name}\n___________________`);
+  }
+
+  onPutInCart() {
+    this.localStorageService.addProductToCard(this.product);
   }
 
 }

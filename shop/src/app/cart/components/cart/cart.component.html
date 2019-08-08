@@ -1,3 +1,5 @@
-<div class="panel panel-default">
-  cart works!
-</div>
+<ul>
+  <li *ngFor="let product of cart">
+    <p>{{product.name}}</p>
+  </li>
+</ul>

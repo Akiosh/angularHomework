@@ -2,4 +2,5 @@
 <div>description: {{product.description}}</div>
 <div>price: {{product.price}}</div>
 <div>isAvailable: {{product.isAvailable}}</div>
-<button (click)="onBuy($event)">Buy {{name}}!</button>
+<button (click)="onBuy($event)">Buy {{product.name}}!</button>
+<button (click)="onPutInCart($event)">put in cart {{product.name}}!</button>
